@@ -1,7 +1,9 @@
 import {createStore} from "redux"
 
 
-function Todo(state={}, action) {
+function Todo(state={
+    name:"shayan"
+}, action) {
     switch (action.type) {
         case "ADD_TODO":
             return {
@@ -14,7 +16,7 @@ function Todo(state={}, action) {
                 text: 'TODO_DELETED'
             }            
         default:
-            break;
+            return state
     }
     
 }
@@ -25,5 +27,8 @@ const store = createStore(Todo, {})
 store.dispatch({
     type: "ADD_TODO",
 })
+
+console.log(store.getState());
+
 
 export default store
