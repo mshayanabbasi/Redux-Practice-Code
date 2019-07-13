@@ -1,4 +1,4 @@
-import {createStore} from "redux"
+import {createStore, combineReducers} from "redux"
 
 
 function Todo(state={
@@ -41,8 +41,14 @@ function User(state={
     
 }
 
+
+const rootReducer = combineReducers({
+    Todo,
+    User
+})
+
                         //reducer, default store
-const store = createStore(Todo, {})
+const store = createStore(rootReducer, {})
 
 store.dispatch({
     type: "ADD_TODO",
