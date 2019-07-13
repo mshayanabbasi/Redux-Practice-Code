@@ -5,3 +5,5 @@ component mai sai koi ek aesa function call krte ha jo return ma hum kuch na kuc
 store.dispatch method jo action k kaam krta ha k wo reducer ma ja kr condition check kre ga agr condition true hojae ge to wahi ruk jae ga
 reducer koi piece of state provide kr raha hota ya phir usko manage kr raha hota 
 agr hum ek sai zaida reducer banate hai to uske liye hum ek or component call kra te ha uska name combinedReducer ha 
+agr ek bhi condition ek bhi reducer mai true hogae to wo aage nhi jae ga balke wahi ruk jae or ek condition k sub kuch return kr dega 
+react-redux ki library hum connect provide kr rahe hoti hai connect ko call kr ke hum apne store k bridge bana sakte hai apne component k sath or dosre lafzo ma apne redux k store k sath bind kra sakte ha 
