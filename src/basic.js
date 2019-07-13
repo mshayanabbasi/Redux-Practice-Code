@@ -2,7 +2,7 @@ import {createStore, combineReducers} from "redux"
 
 
 function Todo(state={
-    name:"shayan"
+    todo:"TODO_ONE"
 }, action) {
     switch (action.type) {
         case "ADD_TODO":
@@ -51,7 +51,7 @@ const rootReducer = combineReducers({
 const store = createStore(rootReducer, {})
 
 store.dispatch({
-    type: "ADD_TODO",
+    type: "ADD_USER"
 })
 
 console.log(store.getState());
