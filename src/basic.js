@@ -21,6 +21,26 @@ function Todo(state={
     
 }
 
+function User(state={
+    name:"shayan"
+}, action) {
+    switch (action.type) {
+        case "ADD_USER":
+            return {
+                ...state,
+                user: 'USER_ADDED'
+            }            
+        case "DELETE_USER":
+            return {
+                ...state,
+                user: 'USER_DELETED'
+            }            
+        default:
+            return state
+    }
+    
+}
+
                         //reducer, default store
 const store = createStore(Todo, {})
 
