@@ -50,11 +50,13 @@ const rootReducer = combineReducers({
                         //reducer, default store
 const store = createStore(rootReducer, {})
 
-store.dispatch({
-    type: "ADD_USER"
-})
+// store.dispatch({
+//     type: "ADD_USER"
+// })
 
-console.log(store.getState());
+// console.log(store.getState());
+
+
 
 
 export default store;
