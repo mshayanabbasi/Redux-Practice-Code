@@ -1,8 +1,10 @@
+import TodoAction from "../Action/todoAction";
+
 function Todo(state={
     todo:"TODO_ONE"
 }, action) {
     switch (action.type) {
-        case "ADD_TODO":
+        case TodoAction.GET_TODO:
             return {
                 ...state,
                 text: 'TODO_ADDED'
