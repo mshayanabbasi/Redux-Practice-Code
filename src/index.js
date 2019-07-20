@@ -6,7 +6,7 @@ import { Provider } from "react-redux"
 // import Store from './basic'
 import * as serviceWorker from './serviceWorker';
 import Store from './store/store'
-console.log(Store.getState());
+// console.log(Store.getState());
 
 
 ReactDOM.render(
