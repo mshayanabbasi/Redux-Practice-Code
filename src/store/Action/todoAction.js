@@ -7,19 +7,20 @@ class TodoAction {
     static getTodo(data){
         return {
             type: this.GET_TODO,
-            data
+            
         }
     }
     static getTodoSuccessfull(data){
         return {
             type: this.GET_TODO_SUCCESSFULL,
-            data
+            data: data.todos
+            
         }
     }
     static getTodoFailed(data) {
         return {
             type: this.GET_TODO_FAILED,
-            data
+            
         }
     }
 }

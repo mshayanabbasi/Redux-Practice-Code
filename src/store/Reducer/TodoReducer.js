@@ -1,24 +1,36 @@
 import TodoAction from "../Action/todoAction";
 
-function Todo(state={
-    todo:"TODO_ONE"
+function TodoReducer(state={
+    isLoading: false,
+    isError: false,
+    todos: [],
+    errorMessage: "",
+    sucessMessage: ""
 }, action) {
     switch (action.type) {
         case TodoAction.GET_TODO:
             return {
                 ...state,
-                text: 'TODO_ADDED'
+                isLoading: true
             }            
-        case "DELETE_TODO":
+        case TodoAction.GET_TODO_SUCCESSFULL:
             return {
                 ...state,
-                text: 'TODO_DELETED'
+                isLoading: false,
+                todos: action.data,
+                isError: false
             }            
+        case TodoAction.GET_TODO_FAILED:
+            return {
+                ...state,
+                isLoading:false,
+                isError: true
+            }
         default:
             return state
     }
     
 }
 
-export default Todo
+export default TodoReducer
 
