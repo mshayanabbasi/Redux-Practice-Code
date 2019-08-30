@@ -23,7 +23,7 @@ function TodoReducer(state={
         case TodoAction.GET_TODO_FAILED:
             return {
                 ...state,
-                isLoading:false,
+                isLoading:false,    
                 isError: true
             }
         default:
